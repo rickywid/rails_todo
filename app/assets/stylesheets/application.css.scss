@@ -23,7 +23,11 @@ $link-color: rgb(85, 166, 169);
 /* GENERAL STYLING */
 
 body {
+  background: linear-gradient(bottom right, rgb(245, 228, 143), rgb(205, 237, 232),  rgb(220, 252, 216));
   background: -webkit-linear-gradient(bottom right, rgb(245, 228, 143), rgb(205, 237, 232),  rgb(220, 252, 216));
+  background: -moz-linear-gradient(bottom right, rgb(245, 228, 143), rgb(205, 237, 232),  rgb(220, 252, 216));
+  background: -ms-linear-gradient(bottom right, rgb(245, 228, 143), rgb(205, 237, 232),  rgb(220, 252, 216));
+  background: -o-linear-gradient(bottom right, rgb(245, 228, 143), rgb(205, 237, 232),  rgb(220, 252, 216));
 }
 
 h1,h2,h3,h4,h5,h6 {
