@@ -1,0 +1,40 @@
+
+
+
+
+
+
+
+.col-md-6.col-md-offset-3
+	.panel.panel-default
+		.panel-heading
+			%h1= @list.title
+		.panel-body			
+			= link_to "Back", root_url, class: "pull-right btn btn-custom"
+			- if @task_count.count == 0
+				%h3 You don't have any tasks assigned
+			- @list.tasks.each do |task|
+				
+				- if task.persisted?
+					- if task.completed
+						%li
+							%i.glyphicon.glyphicon-ok.complete
+							%strike= task.task
+					- else	
+						%li
+							= link_to complete_list_task_path(@list, task.id), method: :patch do
+								%i.glyphicon.glyphicon-ok
+							= task.task		
+			.count
+				%h5 Total Tasks: #{@task_count.count}
+				%h5 Tasks Incomplete: #{@completed_true.count}
+				%h5 Tasks Completed: #{@completed_false.count}
+		.panel-footer
+			= simple_form_for([@list, @task], :url => list_path(@list)) do |f|
+				= f.input :task, label: false, error: false
+				= f.submit "Add Task", class: "btn btn-success"
+			%br
+			- if @task.errors.any?
+				- @task.errors.full_messages.each do |err|
+					%h4.errors= err
+			%br

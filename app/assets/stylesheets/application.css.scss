@@ -1,0 +1,195 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+$cyan: #85CDC5;
+$link-color: rgb(85, 166, 169);
+
+/* GENERAL STYLING */
+
+body {
+  background: -webkit-linear-gradient(bottom right, rgb(245, 228, 143), rgb(205, 237, 232),  rgb(220, 252, 216));
+}
+
+h1,h2,h3,h4,h5,h6 {
+	color: $link-color;
+	font-weight: bold;
+}
+a {
+	color: $link-color;
+	transition: color 0.3s
+}
+a:hover {
+	text-decoration: none;
+	color: #48CBD0;
+}
+
+.input { 
+	display: inline-block ;
+}
+
+input[type="text"] {
+  margin-top: 50px;
+  width: 100%;
+  background-color: transparent;
+  border-bottom: 1px solid rgb(168, 169, 205);
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  outline: none;
+  font-size: 30px;
+  font-weight: bolder;
+  margin-bottom: 40px;
+  color: $link-color;
+}
+
+li {
+  border-bottom: 1px solid $cyan;
+  list-style: none;
+  padding: 20px;
+  font-size: 25px;
+  color: $link-color;
+}
+
+li:last-child {
+  list-style: none;
+  padding: 20px;
+  font-size: 25px;
+  border-bottom: none;
+}
+
+/* PANEL STYLING */
+
+.panel {
+	margin-top: 50px;
+    background-color: rgba(255,255,255,0.1);
+	.panel-body {
+		padding: 35px;
+		.list-title {
+			margin-left: 40px;
+		}
+		.count {
+			padding: 0px;
+			margin-top: 30px;
+		}
+	}
+    .panel-heading, .panel-footer {
+    	background-color: rgba(255,255,255,0.5);
+    	text-align: center;
+    	border-color: $cyan;
+    }
+}
+
+.panel-default {
+	border-color: $cyan;
+}
+
+/* ERROR MESSAGE */
+
+.errors {
+  color: $link-color;
+  font-weight: bold;
+}
+
+/* BUTTONS */
+
+.btn-success {
+  color: #fff;
+  background-color: $cyan;
+  border: none;
+  padding: 5px 25px;
+  font-weight: bolder;
+  -webkit-transition: background-color 0.5s;
+  -moz-transition: background-color 0.5s;
+  -ms-transition: background-color 0.5s;
+  -o-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+  }
+
+ .btn-success:hover {
+  color: #fff;
+  background-color: #63B0A7;
+  border: none;
+  padding: 5px 25px;
+  font-weight: bolder;
+ }
+
+ .btn-custom {
+ 	border: 1px solid $cyan;
+ 	color: $cyan;
+ 	-webkit-transition: border 0.3s
+ 	-moz-transition: border 0.3s
+ 	-ms-transition: border 0.3s
+ 	-o-transition: border 0.3s
+ 	transition: border 0.3s
+
+ }
+  .btn-custom:hover {
+ 	border: 1px solid $link-color;
+ 	color: $link-color;
+ }
+
+/* GLYPHICONS */
+
+.glyphicon {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin-right: 10px;
+  color: #A2C6D3;
+  font-size: 12px;
+  border: 1px solid $cyan;
+  padding: 10px;
+
+  -webkit-transition: color 0.2s;
+  -moz-transition: color 0.2s;
+  -ms-transition: color 0.2s;
+  -o-transition: color 0.2s;
+  transition: color 0.2s;
+  /* padding-right: 50px; */
+  /* border-right: 1px solid black; */
+}
+
+.glyphicon-ok:hover {
+	color: #76E26A;
+	/*border-color: $link-color;*/
+}
+.glyphicon-trash:hover, 
+.glyphicon-pencil:hover {
+	color: #6196A9;
+	/*border-color: $link-color;*/
+}
+
+.complete {
+	color: #76E26A;
+}
+
+/* alerts */
+.alert-success {
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #A1B339;
+  font-weight: bold;
+  text-align: center;
+}
