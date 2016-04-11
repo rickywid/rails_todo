@@ -1,28 +1,8 @@
-== README
+# Ruby on Rails To Do List
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Overview
+A Todo List built in Ruby on Rails. This was a way for me to get familiar with the Rails MVC framework. The user is able to create, read, update, delete todo's. After completing the project I can say I have a solid understanding of the MVC framework.
 
-Things you may want to cover:
+## DEMO
+See a [Demo] (https://secure-meadow-2191.herokuapp.com/)
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
